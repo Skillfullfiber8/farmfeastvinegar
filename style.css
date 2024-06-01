@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.links > a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 20px
+}
+
+.links{
+    margin: 50px;
+}
+
+.logo{
+    height: 130px; 
+}
+
+hr{
+    height: 2px;
+    background-color: #4774AF;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 2px solid #4774AF;
+    z-index: 20;
+}
+
+.layout-container{
+    max-width: 1200px; 
+    margin: 0 auto;
+    float: none;
+  }
+
+.banner{
+    margin: 30px;
+    padding: 27px;
+    margin-top: -8px;
+}
+
+.banner-image{
+    height: 543px;
+}
+
+.bar{
+    background-color: #4774AF;
+    height: 3px;
+    width: 60px;
+    transition: width 0.2s ease;
+}
+
+.products{
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-card > img{
+    height: 200px;
+    width: auto;
+    margin-top: 10px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.content-card{
+    margin: 30px;
+    padding-top: 10px;
+}
+
+.desc{
+    opacity: 75%;
+    padding-top: 20px;
+}
+
+.desc > p{
+    font-size: 20px;
+}
+
+.pr{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 25px;
+    margin-top: 40px;
+    border: 2px solid #4774AF;
+    align-items: center;
+    max-width: 300px;
+}
+
+.flavour1{
+    background-color: #4774AF;
+    height: 8px;
+    width: 200px;
+}
+
+.flavour2{
+    background-color: #f35884;
+    height: 8px;
+    width: 200px;
+}
+
+.flavour3{
+    background-color: #62f358;
+    height: 8px;
+    width: 200px;
+}
+
+.pr:hover{
+    box-shadow: 0 4px 8px 0 rgba(111, 111, 111, 0.2), 0 6px 20px 0 rgba(119, 119, 119, 0.19);
+}
+
+.pr:hover .bar{
+    width: 150px;
+}
