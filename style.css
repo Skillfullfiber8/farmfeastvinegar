@@ -4,32 +4,41 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 170px;
+  }
+
 body{
     font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/*<--------- Header start ------>*/
+
 .links > a{
     text-decoration: none;
     color: black;
     padding: 10px;
     font-size: 20px
+    
+}
+
+.links > a:hover{
+    border-bottom: 2px solid #4774AF;
 }
 
 .links{
     margin: 50px;
+    transition: transform 0.2s ease;
 }
 
 .logo{
-    height: 130px; 
+    max-width: 372.46px;
+    height: auto; 
+    width: 100%;
 }
-
-hr{
-    height: 2px;
-    background-color: #4774AF;
-}
-
 
 header{
     display: flex;
@@ -39,7 +48,37 @@ header{
     background-color: white;
     border-bottom: 2px solid #4774AF;
     z-index: 20;
-}
+} 
+
+  
+  header a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+
+    .links{
+        display: none;
+    }
+
+    .logo{
+        max-width: 222.46px;
+        height: auto; 
+        width: 100%;
+    }
+
+  }
+
+
+/*<--------- Header end ------>*/
+
+
 
 .layout-container{
     max-width: 1200px; 
@@ -50,11 +89,33 @@ header{
 .banner{
     margin: 30px;
     padding: 27px;
-    margin-top: -8px;
+    margin-top: 10px;
+    margin-bottom: 80px;
 }
 
 .banner-image{
-    height: 543px;
+    max-width: 1086px;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .banner{
+        margin: 10px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .topic{
+        margin: 20px;
+    }
+
+    .layout-container{
+        width: auto;
+    }
 }
 
 .bar{
@@ -64,9 +125,22 @@ header{
     transition: width 0.2s ease;
 }
 
+.bar-topic{
+    background-color: #4774AF;
+    height: 3px;
+    width: 160px; 
+}
+
 .products{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.products > a {
+    text-decoration: none;
+    color: black;
 }
 
 .image-card > img{
@@ -76,6 +150,44 @@ header{
     border-radius: 10px 0px 0px 10px;
 }
 
+@media screen and (max-width: 1000px) {
+    .image-card > img{
+        height: 150px;
+        width: auto;
+        margin-left: 30px;
+    }
+
+    .bar-topic{
+        background-color: #4774AF;
+        height: 3px;
+        width: 100px; 
+    }
+
+    .products{
+       justify-content: center; 
+    } 
+
+    .pr{
+        margin: 0px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+
+    .desc-contact{
+        padding: 0px;
+        margin-right: 20px;
+    }
+    
+    .desc-contact > p{
+        margin: 0px;
+        font-size: 10px;
+    }
+}
+
+
 .content-card{
     margin: 30px;
     padding-top: 10px;
@@ -84,6 +196,7 @@ header{
 .desc{
     opacity: 75%;
     padding-top: 20px;
+    
 }
 
 .desc > p{
@@ -99,24 +212,28 @@ header{
     border: 2px solid #4774AF;
     align-items: center;
     max-width: 300px;
+    
 }
 
 .flavour1{
     background-color: #4774AF;
     height: 8px;
     width: 200px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .flavour2{
     background-color: #f35884;
     height: 8px;
     width: 200px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .flavour3{
     background-color: #62f358;
     height: 8px;
     width: 200px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .pr:hover{
@@ -126,3 +243,64 @@ header{
 .pr:hover .bar{
     width: 150px;
 }
+
+.pr a{
+    text-decoration: none;
+    color: black;
+}
+
+.customers{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cr > img{
+    height: auto;
+    max-width: 200px;
+    width: 100%;
+    margin: 10px;
+}
+
+.cr{
+    align-self: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.contact{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 0px 14px;
+    height: auto;
+    text-align: left;
+    margin: 30px;
+}
+
+.container-pr{
+    max-width: 700px;
+    margin-top: 70px;
+    padding-bottom: 100px;
+}
+
+.desc-contact{
+    padding: 20px;
+}
+
+.desc-contact > p{
+    margin: 10px;
+    font-size: 20px;
+}
+
+footer{
+    text-align: center;
+    padding: 40px;
+    border-top: 2px solid #4774AF;
+  }
+
