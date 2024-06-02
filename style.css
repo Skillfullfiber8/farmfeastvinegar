@@ -51,16 +51,6 @@ header{
 } 
 
   
-  header a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
   @media screen and (max-width: 1000px) {
 
     .links{
@@ -147,7 +137,7 @@ header{
     height: 200px;
     width: auto;
     margin-top: 10px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -185,12 +175,25 @@ header{
         margin: 0px;
         font-size: 10px;
     }
+
+    .icon{
+        width: 15px;
+    }
 }
 
 
 .content-card{
     margin: 30px;
     padding-top: 10px;
+    width: 220px;
+}
+
+.garlic{
+    color: #f35884;
+}
+
+.turmeric{
+    color: #FEC016;
 }
 
 .desc{
@@ -230,7 +233,7 @@ header{
 }
 
 .flavour3{
-    background-color: #62f358;
+    background-color: #FEC016;
     height: 8px;
     width: 200px;
     border-radius: 0px 0px 10px 10px;
@@ -283,6 +286,10 @@ a{
     margin: 30px;
 }
 
+.icon{
+    padding-left: 10px;
+}
+
 .container-pr{
     max-width: 700px;
     margin-top: 70px;
@@ -304,3 +311,36 @@ footer{
     border-top: 2px solid #4774AF;
   }
 
+.article-img{
+    width: 200px;
+    height: auto;
+    float: left;
+    margin: 15px 20px 0px 0px;
+}
+
+.ref{
+    display: flex;
+    margin-left: 30px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .article-img{
+        float: center;
+        align-items: center;
+    }
+}
+
+.content-article{
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.content-article > p{
+    padding-top: 10px;
+}
+
+.back-btn{
+    display: flex;
+    margin: 20px;
+}
